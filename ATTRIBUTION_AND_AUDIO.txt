@@ -1,9 +1,7 @@
-Keikyu 2100 Siemens GTO recording
+Network Fleet Manager 1.0.0 Beta
 
-Title: 京急VVVF.ogg
-Recorded by まるたごっち on July 28, 2008, at Keikyu Shinagawa Station.
-The original upload log also credits boy-flash.
-The author released this recording into the public domain.
-The original Ogg bytes are embedded in mod/index.js.
+This package includes no custom sound recordings. Subway Builder's built-in sounds are provided by the game.
 
-Source: https://commons.wikimedia.org/wiki/File:%E4%BA%AC%E6%80%A5VVVF.ogg
+The bundled Python runtime and its license are included with the Windows distribution ZIP. Vehicle and operator names identify the equipment represented by the mod.
+
+Earlier private development builds and some historical changelog entries discuss additional sounds; those recordings are not included in the current redistribution package.
