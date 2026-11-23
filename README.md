@@ -41,14 +41,7 @@ The current redistribution package uses **Subway Builder's native audio only**. 
 - Platform: **Windows x64** (not a guarantee of support for every Windows OS release or 32-bit Windows)
 - Public release version: **1.0.0 Beta** (not yet published)
 - Internal manifest version: **1.0.0-beta**
-
-## Official release signing
-
-The owner is preparing **Ed25519 signed releases** to let players verify that an NFM package is authentic. The private signing key and its passphrase remain **on the owner's own PC**, never in this repository or a downloadable ZIP. The installer verifies the signed file inventory before installing, and fails safely if files have changed.
-
-**The signing setup is still pending the owner's personal key generation and signing. No signed binary is published yet.** Once configured, the release page will display the public key's SHA-256 fingerprint, and players should compare it with the installer's verified identity. Signing verifies an authorized distribution; it cannot make client-side JavaScript impossible to inspect or modify.
-
-This project is community-developed and is not an official Subway Builder release. Compatibility with future game updates is not guaranteed.
+- \
 
 ## Rights
 
