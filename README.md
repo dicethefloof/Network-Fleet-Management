@@ -1,10 +1,10 @@
 # Network Fleet Management (NFM)
 
-**Public preview 0.1** · Subway Builder mod · Windows x64 (Steam and direct-purchase support is the goal)
+**NFM 1.0.0 release candidate** · Subway Builder mod · Windows x64 (Steam and direct-purchase support is the goal)
 
 Network Fleet Management expands how players manage trains, buses, yards, and services in Subway Builder. It adds mixed-fleet management and tools for scheduling, tracking, equipment identification, and transit operations.
 
-> **Version note:** The public GitHub release is labeled **0.1**. The supplied mod package still identifies its internal development version as **1.0.5 WIP**, and targets **Subway Builder 1.8.0**. This is an early preview, not a fully verified stable release.
+> **Version note:** The public build and internal mod version are **1.0.0**. The source preserves legacy `v105` protocol identifiers and the earlier development changelog for compatibility. A GitHub binary release has not yet been published. Automatic rail dispatch and long-session stability still require verification.
 
 ## What is included
 
@@ -15,7 +15,7 @@ Network Fleet Management expands how players manage trains, buses, yards, and se
 - Expanded rolling-stock configurations, including Light Rail and Light Metro
 - Installer and rollback tools for verified Windows game archives; Steam is detected automatically and other install locations can be specified manually
 
-Some advanced operations, including full automatic yard returns, certain consist behaviors, and long-session stability, remain unverified. The existence of a menu or code path is not proof of successful physical operation in-game.
+The latest targeted report found a Tokyo train and an R142A remaining parked in automatic rail-mixing scenarios; the specific hold conditions were not established. Full automatic yard returns and long-session stability remain unverified. The existence of a menu or code path is not proof of successful physical operation in-game.
 
 ## Installing the public package
 
@@ -39,8 +39,8 @@ The public package includes a credited public-domain Keikyu GTO recording embedd
 - Intended Windows distribution support: **Steam and direct purchases from the game's website**
 - Verified installer compatibility: **Specific Subway Builder 1.8.0 Steam `app.asar` hashes only**. A website-purchased build may work if its archive is identical; different builds require separate verification and installer support.
 - Platform: **Windows x64** (not a guarantee of support for every Windows OS release or 32-bit Windows)
-- Public release label: **0.1**
-- Internal mod version: **1.0.5 WIP**
+- Public release version: **1.0.0** (release candidate; not yet published)
+- Internal mod version: **1.0.0**
 
 This project is community-developed and is not an official Subway Builder release. Compatibility with future game updates is not guaranteed.
 
