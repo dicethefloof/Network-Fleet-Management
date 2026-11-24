@@ -8,7 +8,9 @@ Network Fleet Manager (NFM) is a fleet and transit operations expansion for Subw
 
 The [Network Fleet Manager 1.0.0 Beta release](https://github.com/dicethefloof/Network-Fleet-Management/releases/tag/NFM-1.0.0-beta) is published.
 
-**Download status: the Windows installer has not yet been attached to the release.** Once it is attached, download **Network-Fleet-Manager-1.0.0-Beta-Windows.zip** under **Assets** on that page.
+**[Download Network Fleet Manager 1.0.0 Beta for Windows](https://github.com/dicethefloof/Network-Fleet-Management/releases/download/NFM-1.0.0-beta/Network-Fleet-Manager-1.0.0-Beta-Windows.zip)** (11.8 MB)
+
+The uploaded Windows ZIP matches the SHA-256 checksum documented in the [release notes](RELEASE-NOTES-1.0.0-Beta.md). This is a Beta, not a stable release.
 
 Do not download GitHub's automatically generated "Source code" ZIP or an older owner signing kit. The Windows ZIP is the installer package.
 
