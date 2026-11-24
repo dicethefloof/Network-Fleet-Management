@@ -1,48 +1,94 @@
-# Network Fleet Manager (NFM)
+# Network Fleet Manager — 1.0.0 Beta
 
-**Network Fleet Manager 1.0.0 Beta** · Subway Builder mod · Windows x64
+Network Fleet Manager (NFM) is a fleet and transit operations expansion for Subway Builder. It adds mixed-fleet configuration, equipment numbering, scheduling tools, vehicle tracking, and an expanded vehicle roster.
 
-Network Fleet Manager expands how players manage trains, buses, yards, and services in Subway Builder. It adds mixed-fleet management and tools for scheduling, tracking, equipment identification, and transit operations.
+> **Beta for verified Subway Builder 1.8.0 builds on Windows x64.** Automatic rail departures, full yard returns, and long-session stability still need further gameplay verification.
 
-> **Version note:** The mod is **1.0.0 Beta** (`1.0.0-beta` in its manifest). Legacy `v105` worker protocol identifiers and historical changelog entries remain for save compatibility. **No GitHub binary release has been published yet.** Automatic rail dispatch and long-session stability still require live verification.
+## Download
 
-## What is included
+Open the [Releases page](https://github.com/dicethefloof/Network-Fleet-Management/releases) and select **Network Fleet Manager 1.0.0 Beta** when available.
 
-- Fleet Manager and eligible mixed-fleet configuration
-- Bus scheduling, rail timetable, and tracking interfaces
-- Fleet identification and model-specific car numbering improvements
-- Yard-based operating workflows and infrastructure compatibility rules
-- Expanded rolling-stock configurations, including Light Rail and Light Metro
-- Installer and rollback tools for verified Windows game archives; Steam is detected automatically and other install locations can be specified manually
+Under **Assets**, download **Network-Fleet-Manager-1.0.0-Beta-Windows.zip**.
 
-The latest targeted report found a Tokyo train and an R142A remaining parked in automatic rail-mixing scenarios; the specific hold conditions were not established. Full automatic yard returns and long-session stability remain unverified. The existence of a menu or code path is not proof of successful physical operation in-game.
+Do not download GitHub's automatically generated "Source code" ZIP or an older owner signing kit. The Windows ZIP is the installer package.
 
-## Installing Network Fleet Manager
+## Before installing
 
-1. Download the **owner-signed Network Fleet Manager 1.0.0 Beta Windows ZIP** from this repository's **Releases** page once an official release is published. Do not install an unsigned owner preparation kit.
-2. Close Subway Builder and extract the archive.
-3. Run **Verify Network Fleet Manager.cmd** to verify the official release signature and all files, then run **Install NFM.cmd** from the extracted folder. Steam installs are auto-detected. For another Windows distribution, point the installer at the folder containing `resources/app.asar`, e.g. `"Install NFM.cmd" --game-dir "C:\\Path\\To\\Subway Builder"` in Command Prompt. The game archive must still match one of the hashes the installer supports.
-4. In Subway Builder, open **Settings → Advanced → Mod Manager**, enable **Network Fleet Manager**, and restart.
-5. Open a city and use the Fleet Manager toolbar button. Normal operations should not require enabling the optional manual-controls switch.
+- You need a compatible Windows x64 installation of Subway Builder **1.8.0**. Only verified game archive builds are supported.
+- Close Subway Builder completely and back up your important saves.
+- No separate Python installation, signing key, passphrase, developer access, or command-line setup is needed for a standard Steam installation.
 
-For rollback, close the game and run **Rollback NFM.cmd**. The installer must recognize a supported game archive; do not bypass compatibility checks. Back up important saves before installing a beta mod.
+## Install NFM
 
-## Release contents and private files
+1. Right-click the downloaded ZIP and select **Extract All**.
+2. Open the extracted folder. Keep the included files and the `runtime` folder together.
+3. Double-click **Verify Network Fleet Manager.cmd** to check the extracted package's integrity.
+4. If verification passes, double-click **Install NFM.cmd**. Read the installer output and follow any prompts. Existing NFM installations may require confirmation before replacement.
+5. After installation succeeds, start Subway Builder.
+6. Go to **Settings → Advanced → Mod Manager**, enable **Network Fleet Manager**, and restart the game.
+7. Open a new city first to confirm the game loads and the **Fleet Manager** toolbar button is available. Leave experimental **Enable manual NFM controls** OFF for ordinary service.
 
-Only the **public redistribution-eligible NFM package** belongs in this repository. **Do not upload private development builds, NYCT or MultiLevel third-party recordings, or private sound references.**
+If the installer fails, do not ignore its error or bypass its checks. See troubleshooting below.
 
-The current redistribution package uses **Subway Builder's native audio only**. It includes no custom NYCT, MultiLevel, or other private recordings and no proprietary game archive. See [audio attribution](ATTRIBUTION_AND_AUDIO.txt). The bundled Python runtime carries its own license in the distribution ZIP.
+### Nonstandard Steam library or website purchase
 
-## Compatibility and limitations
+If the installer cannot locate your game, open Command Prompt inside the extracted folder and run:
 
-- Target game: **Subway Builder 1.8.0**
-- Intended Windows distribution support: **Steam and direct purchases from the game's website**
-- Verified installer compatibility: **Specific Subway Builder 1.8.0 Steam `app.asar` hashes only**. A website-purchased build may work if its archive is identical; different builds require separate verification and installer support.
-- Platform: **Windows x64** (not a guarantee of support for every Windows OS release or 32-bit Windows)
-- Public release version: **1.0.0 Beta** (not yet published)
-- Internal manifest version: **1.0.0-beta**
-- \
+```cmd
+"Install NFM.cmd" --game-dir "D:\Games\Subway Builder"
+```
 
-## Rights
+Replace the example directory with your actual game folder (the one containing `resources\app.asar`).
 
-This repository does not grant a license to redistribute Subway Builder's proprietary files or third-party materials. No blanket open-source license has been applied to the project at this stage.
+Website-purchased copies are supported only when the game archive matches a verified build. A matching version number alone does not guarantee compatibility.
+
+## Features
+
+- Configure eligible mixed bus and rail fleets, subject to vehicle, infrastructure, and yard compatibility.
+- Manage bus runs, rail timetables, layover planning, vehicle tracking, and fleet inventory.
+- Assign persistent fleet numbers from built-in operator roster ranges, with separate married-unit, locomotive, coach, and cab-car records.
+- Browse an expanded roster of buses, subway trains, commuter rail, intercity equipment, light rail, light metro, and selected Japanese rolling stock.
+- Use passenger monitoring, equipment specifications, and track audits.
+- Install, upgrade, or roll back using the included Windows tools.
+
+The mod preserves native vehicle IDs. Fleet numbers are in-game roster allocations, not proof that a formation matches an actual historical train. Models without documented ranges, or with exhausted ranges, still need additional roster data.
+
+## Compatibility and known limitations
+
+| Item | Status |
+| --- | --- |
+| Subway Builder 1.8.0, verified Windows archives | Supported by installer |
+| Subway Builder 1.8.1-rc1 and other unverified archives | Not supported |
+| Steam | Standard installation auto-detected |
+| Website edition | Matching verified archive required |
+| macOS / Linux | Not supported by this Windows installer |
+| Automatic bus mixing | Observed working in prior gameplay tests |
+| Automatic rail mixing / yard returns | Further live testing needed |
+| Long-session stability | Not yet verified |
+| Individual vehicle wraps, enforced layovers, automatic short-turns, physical consist editing | Incomplete or not included |
+
+The installer performs checksum and archive compatibility checks. These protect against accidental corruption and incompatible patching; they do not prove the authorship of third-party repackaged downloads.
+
+## Rollback
+
+Close Subway Builder and double-click **Rollback NFM.cmd** in the extracted installer folder.
+
+Rollback restores the verified archive and mod files from immediately before the last managed installation, subject to matching backup records. It does not restore a save from an earlier gameplay session. Keep your own save backups.
+
+## Troubleshooting and bug reports
+
+- **Unsupported archive/hash:** Do not force the installer to run. Report your game version and the exact error.
+- **Game directory not found:** Use the manual game directory command above.
+- **Verification failure:** Re-download the official ZIP and extract into a fresh folder.
+- **Fleet Manager missing or city won't load:** Confirm NFM is enabled, restart, and test on a fresh city. If necessary, roll back.
+- **Game updates:** Do not reuse this installer against an unverified newer build.
+
+Report bugs through [GitHub Issues](https://github.com/dicethefloof/Network-Fleet-Management/issues). Include the game version, NFM version, other enabled mods, a description of what happened, steps to reproduce, and relevant screenshots or logs. Remove private information before posting logs.
+
+## Release contents
+
+The distribution contains no private sound recordings or proprietary base-game archive. It uses Subway Builder's built-in audio. See [attribution](ATTRIBUTION_AND_AUDIO.txt). The bundled Python runtime includes its license.
+
+NFM is a community-developed mod, not an official Subway Builder release. No blanket open-source license has been granted to NFM.
+
+[Release notes](RELEASE-NOTES-1.0.0-Beta.md)
